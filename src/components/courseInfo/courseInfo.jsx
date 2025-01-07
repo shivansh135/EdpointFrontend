@@ -143,7 +143,6 @@ function CourseInfo({ user }) {
                 </button>
               ) : (
                 <Link
-                  to="/checkout"
                   state={course}
                   type="button"
                   class="btn btn-info"

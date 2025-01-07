@@ -1,9 +1,9 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavScrollExample({ user }) {
   return (
@@ -11,44 +11,44 @@ function NavScrollExample({ user }) {
       expand="lg"
       data-bs-theme="dark"
       style={{
-        position: 'sticky',
-        top: '0px',
-        zIndex: '99999',
-        backgroundColor: '#0A1128',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        transition: 'background-color 0.3s ease',
+        position: "sticky",
+        top: "0px",
+        zIndex: "99999",
+        backgroundColor: "#0A1128",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        transition: "background-color 0.3s ease",
       }}
     >
       <Container fluid>
         <Navbar.Brand
           href="/"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            fontWeight: 'bold',
-            color: '#FFFFFF',
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            fontWeight: "bold",
+            color: "#FFFFFF",
           }}
         >
           <img
-            src={'/edlogo.jpg'}
+            src={"/edlogo.jpg"}
             alt="logo"
             className="logo-hover"
             style={{
-              width: '40px',
-              height: '40px',
-              borderRadius: '50%',
-              transition: 'transform 0.3s ease',
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              transition: "transform 0.3s ease",
             }}
           />
           <span
             style={{
-              border: '2px solid #D1D5DB',
-              borderRadius: '10px',
-              padding: '3px 10px',
-              fontSize: '1rem',
-              color: '#FFFFFF',
-              transition: 'all 0.3s ease',
+              border: "2px solid #D1D5DB",
+              borderRadius: "10px",
+              padding: "3px 10px",
+              fontSize: "1rem",
+              color: "#FFFFFF",
+              transition: "all 0.3s ease",
             }}
             className="brand-hover"
           >
@@ -79,26 +79,28 @@ function NavScrollExample({ user }) {
                 align="end"
                 menuVariant="dark"
                 style={{
-                  fontWeight: 'bold',
-                  color: '#D1D5DB',
-                  border: '2px solid #D1D5DB',
-                  backgroundColor: 'transparent',
-                  padding: '10px 20px',
-                  borderRadius: '15px',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
+                  fontWeight: "bold",
+                  color: "#D1D5DB",
+                  border: "2px solid #D1D5DB",
+                  backgroundColor: "transparent",
+                  padding: "10px 20px",
+                  borderRadius: "15px",
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
                 }}
               >
-                <NavDropdown.Item href="/my-courses">My Courses</NavDropdown.Item>
+                <NavDropdown.Item href="/mycourses">
+                  My Courses
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item
                   onClick={async () => {
                     const response = await fetch(
-                      process.env.REACT_APP_API_CALLBACK + '/login/logout',
-                      { method: 'POST', credentials: 'include' }
+                      process.env.REACT_APP_API_CALLBACK + "/login/logout",
+                      { method: "POST", credentials: "include" }
                     );
                     if (response.status === 200) {
-                      window.location.href = '/';
+                      window.location.href = "/";
                     }
                   }}
                 >
@@ -109,12 +111,12 @@ function NavScrollExample({ user }) {
               <a href="/login">
                 <Button
                   style={{
-                    fontWeight: 'bold',
-                    border: '2px solid #D1D5DB',
-                    color: '#D1D5DB',
-                    backgroundColor: 'transparent',
-                    padding: '10px 20px',
-                    transition: 'all 0.3s ease',
+                    fontWeight: "bold",
+                    border: "2px solid #D1D5DB",
+                    color: "#D1D5DB",
+                    backgroundColor: "transparent",
+                    padding: "10px 20px",
+                    transition: "all 0.3s ease",
                   }}
                   className="login-button"
                 >
